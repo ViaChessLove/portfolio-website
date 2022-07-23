@@ -1,0 +1,32 @@
+@import '../../index.scss';
+
+%wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  border-radius: 20px;
+  transition: all 1.5s ease;
+}
+
+.header-wrapper {
+  @extend %wrapper;
+  @extend %switch-delay;
+  background-color: $headCol;
+  color: $headTextDark;
+}
+
+.header-wrapper_dark {
+  @extend %wrapper;
+  @extend %switch-delay;
+  background-color: $headColDark;
+  color: $headText;
+}
+
+.header-container {
+  max-width: 1500px;
+  padding: 20px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

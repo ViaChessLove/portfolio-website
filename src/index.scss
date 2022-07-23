@@ -1,0 +1,17 @@
+$headCol: rgba(63, 66, 67, 0.963);
+$headColDark: rgba(5, 69, 133, 0.744);
+$headText: rgb(255, 254, 254);
+$headTextDark: rgb(237, 237, 237);
+$bgCol: #fff;
+$bgColDark: rgba(163, 160, 160, 0.785);
+
+* {
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+%switch-delay {
+  transition: all 1.5s ease-in-out;
+}
