@@ -2,12 +2,10 @@
 
 .light {
   background-color: $bgCol;
-  height: 200vh;
   @extend %switch-delay;
 }
 
 .dark {
   background-color: $bgColDark;
-  height: 200vh;
   @extend %switch-delay;
 }

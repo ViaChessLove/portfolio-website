@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { BrowserRouter, Routes } from 'react-router-dom';
 import './App.scss';
 import Header from './components/Header/Header';
 import { ScrollBar } from './global.style';
@@ -11,7 +12,11 @@ const App = () => {
     <div className={theme? 'light': 'dark'}>
       <ScrollBar/>
       <Header/>
-      
+      <BrowserRouter>
+        <Routes>
+
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
