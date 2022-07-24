@@ -1,5 +1,7 @@
-$headCol: rgba(63, 66, 67, 0.963);
-$headColDark: rgba(5, 69, 133, 0.744);
+$headCol: rgb(63, 66, 67);
+$textCol: #fff;
+$headColDark: rgb(5, 69, 133);
+$textColDark: #000;
 $headText: rgb(255, 254, 254);
 $headTextDark: rgb(237, 237, 237);
 $bgCol: #fff;
@@ -14,4 +16,20 @@ $bgColDark: rgba(163, 160, 160, 0.785);
 
 %switch-delay {
   transition: all 1.5s ease-in-out;
+}
+
+%basic-padding {
+  padding-top: clamp(70px, 80px, 90px);
+}
+
+%basic-container {
+  max-width: 1500px;
+}
+
+%block-container {
+  @extend %basic-container;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 100vh;
+  border-radius: 30px;
 }

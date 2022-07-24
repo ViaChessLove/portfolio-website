@@ -24,7 +24,7 @@
 }
 
 .header-container {
-  max-width: 1500px;
+  @extend %basic-container;
   padding: 20px 15px;
   display: flex;
   justify-content: space-between;

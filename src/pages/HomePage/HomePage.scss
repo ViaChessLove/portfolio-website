@@ -1,0 +1,7 @@
+@import '../../index.scss';
+
+.homepage-wrapper {
+  @extend %basic-padding;
+  @extend %switch-delay;
+  @extend %basic-container;
+}

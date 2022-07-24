@@ -1,0 +1,27 @@
+@import '../../index.scss';
+
+$containerPadding: 20px;
+
+%container-flex {
+  display: flex;
+  justify-content: center;
+}
+
+
+.hero-container_black {
+  @extend %switch-delay;
+  @extend %basic-container;
+  @extend %container-flex;
+  @extend %block-container;
+  color: $textCol;
+  margin-bottom: $containerPadding;
+}
+
+.hero-container_light {
+  @extend %switch-delay;
+  @extend %basic-container;
+  @extend %container-flex;
+  @extend %block-container; // 100vh
+  color: $textColDark;
+  margin-bottom: $containerPadding;
+}
