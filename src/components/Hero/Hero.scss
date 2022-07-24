@@ -4,7 +4,14 @@ $containerPadding: 20px;
 
 %container-flex {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+}
+
+%photo {
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 999999px;
 }
 
 
@@ -24,4 +31,46 @@ $containerPadding: 20px;
   @extend %block-container; // 100vh
   color: $textColDark;
   margin-bottom: $containerPadding;
+}
+
+.hero-photo_light {
+  @extend %photo;
+  @extend %switch-delay;
+  border: 5px solid $headColDark;
+  background-color: $headColDark;
+}
+
+.hero-photo_black {
+  @extend %photo;
+  @extend %switch-delay;
+  border: 5px solid $headCol;
+  background-color: $headCol;
+}
+
+.hero-text {
+  display: flex;
+  align-items: center; 
+  flex-direction: column;
+  p {
+    font-size: 24px;
+    line-height: 26px;
+  }
+  ul {
+    @extend %container-flex;
+    margin-top: 20px;
+  }
+  li {
+    margin-left: 10px;
+    font-size: 20px;
+    &:hover{
+      cursor: pointer;
+      border-bottom: 5px solid;
+      transition: all 0.2s ease-out;
+    }
+  }
+}
+
+.hero-text_title {
+  font-size: 36px;
+  margin-bottom: 20px;
 }

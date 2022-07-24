@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './Header.scss';
-import {RiLightbulbLine} from 'react-icons/ri'
-import { ThemeSwitcher } from './Header.style';
+import { LanguageSwitcher, ThemeSwitcher } from './Header.style';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../store/store';
 import { InitialStateProps, switchTheme } from '../../slices/themeSlice';
@@ -18,7 +17,10 @@ const Header = () => {
         <h2>
           Vyacheslav nemtsev - frontend developer
         </h2>
-        <ThemeSwitcher onClick={handleSwitchTheme}/>
+        <div>
+          <ThemeSwitcher onClick={handleSwitchTheme}/>
+          <LanguageSwitcher/>
+        </div>
       </nav>
     </div>
   )

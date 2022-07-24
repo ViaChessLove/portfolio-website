@@ -5,7 +5,7 @@ export interface InitialStateProps {
 }
 
 const initialState: InitialStateProps = {
-  state: false
+  state: true
 }
 
 export const themeSlice = createSlice({
