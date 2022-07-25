@@ -12,7 +12,7 @@ const Header = () => {
     dispatch(switchTheme(!theme))
   }
   return (
-    <div className={theme? 'header-wrapper_dark':'header-wrapper'}>
+    <div className={theme? 'header-wrapper_dark':'header-wrapper_light'}>
       <nav className='header-container'>
         <h2>
           Vyacheslav Nemtsev

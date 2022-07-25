@@ -10,7 +10,7 @@
   z-index: 10;
 }
 
-.header-wrapper {
+.header-wrapper_light {
   @extend %wrapper;
   @extend %switch-delay;
   background-color: $headCol;

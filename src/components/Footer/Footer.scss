@@ -1,0 +1,24 @@
+@import '../../index.scss';
+
+%wrapper {
+  flex: 0 0;
+  right: 0;
+  width: 100%;
+  border-radius: 20px;
+  transition: all 1.5s ease;
+  z-index: 10;
+}
+
+.footer-wrapper_dark {
+  @extend %wrapper;
+  @extend %switch-delay;
+  background-color: $headColDark;
+  color: $headText;
+}
+
+.footer-wrapper_light {
+  @extend %wrapper;
+  @extend %switch-delay;
+  background-color: $headCol;
+  color: $headTextDark;
+}
