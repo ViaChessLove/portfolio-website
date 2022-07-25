@@ -1,10 +1,12 @@
 @import '../../index.scss';
 
-$containerPadding: 20px;
+$containerPadding: 40px;
 
 %container-flex {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2em 0em;
 }
 
 %photo {
@@ -14,14 +16,20 @@ $containerPadding: 20px;
   border-radius: 999999px;
 }
 
+%photo-feature {
+  img {
+    z-index: 1000;
+  }
+}
 
 .hero-container_black {
-  @extend %switch-delay;
-  @extend %basic-container;
+  @extend %switch-delay; //index
+  @extend %basic-container; //index
   @extend %container-flex;
-  @extend %block-container;
+  @extend %block-container; //index
   color: $textCol;
   margin-bottom: $containerPadding;
+  @extend %photo-feature;
 }
 
 .hero-container_light {
@@ -31,6 +39,7 @@ $containerPadding: 20px;
   @extend %block-container; // 100vh
   color: $textColDark;
   margin-bottom: $containerPadding;
+  @extend %photo-feature;
 }
 
 .hero-photo_light {
@@ -58,6 +67,8 @@ $containerPadding: 20px;
   ul {
     @extend %container-flex;
     margin-top: 20px;
+    position: sticky;
+    top: 70px;  
   }
   li {
     margin-left: 10px;

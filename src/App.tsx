@@ -5,6 +5,7 @@ import './App.scss';
 import Header from './components/Header/Header';
 import { ScrollBar } from './global.style';
 import HomePage from './pages/HomePage/HomePage';
+import Portfolio from './pages/Portfolio/Portfolio';
 import { RootState } from './store/store';
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route index element={<HomePage/>}/>
+          <Route path='/portfolio' element={<Portfolio/>}/>
         </Routes>
       </BrowserRouter>
     </div>

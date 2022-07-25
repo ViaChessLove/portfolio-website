@@ -1,0 +1,54 @@
+@import '../../index.scss';
+
+%skills-title {
+  h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 2em;
+  }
+}
+
+.skills-container_light {
+  @extend %switch-delay; //index
+  @extend %basic-container; //index
+  @extend %block-container; //index
+  color: $textColDark;
+  @extend %skills-title;
+}
+
+.skills-container_black {
+  @extend %switch-delay; //index
+  @extend %basic-container; //index
+  @extend %block-container; //index
+  color: $textCol;
+  @extend %skills-title;
+}
+
+.skillslist-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em 4em;
+  div {
+    max-width: 300px;
+    img {
+      justify-self: center;
+      width: 300px;
+      height: 300px;
+    }
+    h3 {
+      font-weight: 600;
+      font-size: 30px;
+      text-align: center;
+      line-height: 50px;
+    }
+    p {
+      margin: 0 auto;
+      width: 230px;
+      text-align: center;
+      opacity: 0.98;
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+}

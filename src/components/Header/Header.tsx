@@ -15,7 +15,7 @@ const Header = () => {
     <div className={theme? 'header-wrapper_dark':'header-wrapper'}>
       <nav className='header-container'>
         <h2>
-          Vyacheslav nemtsev - frontend developer
+          Vyacheslav Nemtsev
         </h2>
         <div>
           <ThemeSwitcher onClick={handleSwitchTheme}/>
