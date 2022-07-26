@@ -11,6 +11,12 @@ const HomePage = () => {
     <main className='homepage-wrapper'>
       <Hero theme={theme}/>
       <Skills theme={theme}/>
+      {/*
+        <Contact  theme={theme}/>
+        <Socials theme={theme}/>
+        <Education theme={theme}/>
+        <Experience theme={theme}/>
+      */}
     </main>
   )
 }
