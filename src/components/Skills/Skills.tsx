@@ -8,9 +8,10 @@ import SkillsList from './SkillsList';
 
 interface SkillsProps {
   theme: boolean;
+  lang: boolean;
 }
 
-const Skills: React.FC<SkillsProps> = ({theme}) => {
+const Skills: React.FC<SkillsProps> = ({theme, lang}) => {
   const initial = {opacity: 0, y: 40,};
   const animation = useAnimation();
   const { ref, inView } = useInView({ threshold: 0 });
@@ -24,12 +25,15 @@ const Skills: React.FC<SkillsProps> = ({theme}) => {
       animation.start(initial);
     }
 	}, [inView, animation]);
+
+  //locale
+
   return (
     <motion.div id='skills' initial={initial} transition={{ delay: 0  , duration: 0.2}} animate={animation}  ref={ref} className = {theme? 'skills-container_light': 'skills-container_black'}>
       <h2>
-        Skills
+        {lang? 'Навыки': 'Skills'}
       </h2>
-      <SkillsList/>
+      <SkillsList lang={lang}/>
     </motion.div>
   )
 }

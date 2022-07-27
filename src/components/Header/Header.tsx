@@ -6,6 +6,7 @@ import { RootState } from '../../store/store';
 import { InitialStateProps, switchTheme } from '../../slices/themeSlice';
 import { switchLanguage } from '../../slices/languageSlice';
 import { enHeader, ruHeader } from './headerLanguage';
+import { RouterLink } from '../Hero/Hero.style';
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -21,9 +22,11 @@ const Header = () => {
   return (
     <div className={theme? 'header-wrapper_dark':'header-wrapper_light'}>
       <nav className='header-container'>
-        <h2>
-          {lang? ruHeader: enHeader}
-        </h2>
+        <RouterLink to='/'>
+          <h2>
+            {lang? ruHeader: enHeader}
+          </h2>
+        </RouterLink>
         <div>
           <ThemeSwitcher onClick={handleSwitchTheme}/>
           <LanguageSwitcher onClick={handleSwitchLanguage}/>

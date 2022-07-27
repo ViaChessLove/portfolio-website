@@ -4,13 +4,16 @@ import {motion, useAnimation} from 'framer-motion'
 import { Link } from 'react-scroll';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../store/store';
+import { enHero, ruHero } from './heroData';
+import { RouterLink } from './Hero.style';
 
 
 interface HeroProps {
   theme: boolean;
+  lang: boolean;
 }
 
-const Hero: React.FC<HeroProps> = ({theme}) => {
+const Hero: React.FC<HeroProps> = ({theme, lang}) => {
   //image 
   const initialImage = {opacity: 0, x: -40,};
   const animationImage = useAnimation();
@@ -22,24 +25,27 @@ const Hero: React.FC<HeroProps> = ({theme}) => {
   animationBlock.start({ opacity: 1, x: 0});
 
   //locale
-  const lang = useSelector((state: RootState) => state.language.state);
 
-
+  const heroContent: {
+    about: string,
+    whoami: string,
+    job: string,
+    links: any
+  } = lang? ruHero: enHero;
   return (
     <div className={theme? 'hero-container_light':'hero-container_black'}>
       <motion.img initial={initialImage} transition={{ delay: 0.2, duration: 0.2}} animate={animationImage}
        className={theme? 'hero-photo_light': 'hero-photo_black'} src="./assets/images/me.jpg" alt="" />
       <motion.div initial={initialBlock} transition={{delay: 1, duration: 0.4}} animate={animationBlock} className='hero-text'>
-        <h2 className='hero-text_title'>{lang? 'Обо мне': 'About me'}</h2>
-        <p>{lang? 'Я фронтенд разработчик из России':"I'm frontend developer from Russia"}</p>
-        <p>{lang? "На данный момент в поисках работы":"Currently i'm looking for a job"}</p>
+        <h2 className='hero-text_title'>{heroContent.about}</h2>
+        <p>{heroContent.whoami}</p>
+        <p>{heroContent.job}</p>
         <ul>
-          <Link spy={true} smooth={true} duration={800} to='skills'><li>Skills</li></Link>
-          <li>Portfolio</li>
-          <li>Contact</li>
-          <li>Socials</li>
-          <li>Education</li>
-          <li>Experience</li>
+          {heroContent.links && heroContent.links.map((link: any) => {
+            return link.to === 'portfolio'? 
+            <RouterLink to={link.to}><li>{link.title}</li></RouterLink> :
+            <Link spy={true} smooth={true} duration={800} to={link.to}><li>{link.title}</li></Link>
+            })}
         </ul>
       </motion.div>
     </div>

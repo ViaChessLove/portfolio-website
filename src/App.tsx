@@ -14,8 +14,8 @@ const App = () => {
   return (
     <div className={theme? 'light': 'dark'}>
       <ScrollBar/>
-      <Header/>
       <BrowserRouter>
+        <Header/>
         <Routes>
           <Route index element={<HomePage/>}/>
           <Route path='/portfolio' element={<Portfolio/>}/>
