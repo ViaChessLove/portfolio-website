@@ -81,6 +81,28 @@ $containerPadding: 40px;
       transition: all 0.2s ease-out;
     }
   }
+  @media screen and (max-width: 390px){
+    p {
+      font-size: 20px;
+      line-height: 26px;
+    }
+    ul {
+    gap: 0.2em 0em;
+    margin-top: 20px;
+    position: sticky;
+    top: 70px;  
+    max-width: 500px;
+  }
+  li {
+    margin-left: 10px;
+    font-size: 20px;
+    &:hover{
+      cursor: pointer;
+      border-bottom: 5px solid;
+      transition: all 0.2s ease-out;
+    }
+  }
+  }
 }
 
 .hero-text_title {

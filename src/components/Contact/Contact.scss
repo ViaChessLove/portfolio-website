@@ -1,0 +1,77 @@
+@import '../../index.scss';
+
+%contact-container {
+  @extend %switch-delay; //index
+  @extend %block-container;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 100%;
+  div{
+    padding: 70px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+      text-align: center;
+      font-weight: 550px;
+      font-size: 44px;
+      margin-bottom: 2rem;
+    }
+    p {
+      font-size: 26px;
+      font-weight: 400px;
+      line-height: 60px;
+    }
+    
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 1em 2em;
+      width: 500px;
+      li {
+        border-radius: 99px;
+        padding: 5px 10px;
+        box-shadow: rgb(1, 33, 58) 0px 5px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        &:hover {
+          cursor: pointer;
+          transition: all 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+.contact-container_light {
+  @extend %contact-container;
+  @extend %switch-delay;
+  background: $bgContentLight;
+  color: $colContentLight;
+  ul {
+    li {
+      background-color: red;
+      &:hover {
+        color: rgb(58, 9, 58);
+        background-color: rgb(235, 156, 169);
+      }
+    }
+  }
+}
+
+.contact-container_dark {
+  @extend %contact-container;
+  @extend %switch-delay;
+  background: $bgContentDark;
+  color: $colContentDark;
+    li {
+        background-color: rgb(72, 40, 46);
+        &:hover {
+          color: rgb(176, 54, 176);
+          background-color: rgb(21, 14, 77);
+        }
+    }
+}

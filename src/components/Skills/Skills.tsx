@@ -29,12 +29,12 @@ const Skills: React.FC<SkillsProps> = ({theme, lang}) => {
   //locale
 
   return (
-    <motion.div id='skills' initial={initial} transition={{ delay: 0  , duration: 0.2}} animate={animation}  ref={ref} className = {theme? 'skills-container_light': 'skills-container_black'}>
+    <motion.section id='skills' initial={initial} transition={{ delay: 0  , duration: 0.2}} animate={animation}  ref={ref} className = {theme? 'skills-container_light': 'skills-container_black'}>
       <h2>
         {lang? 'Навыки': 'Skills'}
       </h2>
       <SkillsList lang={lang}/>
-    </motion.div>
+    </motion.section>
   )
 }
 

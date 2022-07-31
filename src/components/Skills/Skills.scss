@@ -3,14 +3,13 @@
 %skills-title {
   h2 {
       text-align: center;
-      font-size: 36px;
-      margin-bottom: 2em;
+      font-size: 44px;
+      margin-bottom: 1em;
   }
 }
 
 .skills-container_light {
   @extend %switch-delay; //index
-  @extend %basic-container; //index
   @extend %block-container; //index
   color: $textColDark;
   @extend %skills-title;
@@ -18,7 +17,6 @@
 
 .skills-container_black {
   @extend %switch-delay; //index
-  @extend %basic-container; //index
   @extend %block-container; //index
   color: $textCol;
   @extend %skills-title;
@@ -38,7 +36,7 @@
     }
     h3 {
       font-weight: 600;
-      font-size: 30px;
+      font-size: 36px;
       text-align: center;
       line-height: 50px;
     }
@@ -49,6 +47,18 @@
       opacity: 0.98;
       font-size: 18px;
       font-weight: 400;
+    }
+  }
+  @media screen and (max-width: 320px){
+    div {
+      max-width: none;
+      padding-left: 5px;
+      padding-right: 5px;
+      img {
+        width: 250px;
+        height: 250px;
+        border-radius: 15px;
+      }
     }
   }
 }
